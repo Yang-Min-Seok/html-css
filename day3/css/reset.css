@@ -1,0 +1,14 @@
+/* CSS (Cascading Style Sheet) == 스타일언어 */
+*{ /* * -> 모든 태그를 의미 */
+  margin:0; /* margin -> 바깥여백 */
+  padding:0; /* padding -> 안쪽 여백 */
+  line-height: 1; /* 줄 간격 기본 */
+}
+h1{
+  font-size: 100%; /* 글자 기본 크기 = 16px */
+  font-weight: normal; /* 글짜 두께 기본 */
+}
+ul{
+  list-style: none; /* li의 점표시 없앰 */
+
+}

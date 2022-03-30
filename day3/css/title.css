@@ -1,0 +1,30 @@
+div#title{
+    width:1100px;
+    margin:0 auto;
+    height:350px;
+    display:flex; /* 수평으로 정렬 */
+    flex-direction:column; /* 수직으로 정렬 */
+    justify-content: center; /* 수직 중앙으로 */
+    align-items:center; /* 수평 중앙으로 */
+    background-color: #eee;
+    background-image: url(https://images.unsplash.com/photo-1575903013621-1387ce8caa74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); /* 이미지 링크 복붙*/
+    background-size:cover; /*
+    cover -> 이미지 하나로 빈 영역없이 다 채움 
+    contain -> 반복하여 채움 */
+    background-position: center; /*
+    top -> 윗부분만 보임
+    center -> 이미지 중앙 부분만 보임
+    bottom -> 아랫 부분만 보임
+    */
+}
+div#title h2{ /* 하위선택자 (title 안에 있는 h2) */
+    margin-bottom: 30px;
+    font-size: 30px;
+    color:#fff;
+    letter-spacing: -1px; /* 글자간 간격 설정 */
+    text-shadow: 1px 3px 3px #333; /* 
+    x방향 y방향 흐릿한정도 색상 */
+}
+div#title p{
+    
+}
