@@ -1,0 +1,521 @@
+1회차 ---------------------
+1 미리보기 플러그인 설치하기
+  file > settings > installs
+
+
+  <!DOCTYPE html> //문서의 버전 최신버전 html5
+  <html lang="en" dir="ltr"> //문서언어
+    <head> //문서의 정보저장영역
+      <meta charset="utf-8"> //문자인코딩
+      <title></title> //문서의 제목
+    </head>
+    <body> //보여지는 구간
+      홈페이지 준비중
+      11월말에 오픈준비중입니다.
+    </body>
+  </html>
+
+  hyper
+  text
+  markup
+  language
+   : 컨텐츠(내용물)의 의미,역활을 표시하는 언어
+
+
+  h1 :heading 머리말(제목)
+  h1~h6
+  hn
+
+  p : paragraph 문단
+      설명
+
+  스타일지정하기
+   .css파일 생성
+   .css구문형식
+    마크업명{
+        속성:값;
+    }
+
+   .html문서와 css파일 연결하기
+
+   link태그 : html문서와 css파일 연결
+   외부스타일시트 : link로 연결된 외부css파일을 연결
+
+
+  2회차-----------------------------
+
+ 1 html주석   <!--  --> 코드설명등 기재(사용자에게는 안보임)
+
+ 2 div태그
+   division 분할,영역
+   비슷한 역활,위치에 있는 것을 묶음
+
+ 2-2 header태그 상단영역태그
+     main태그 본문영역태그
+     footer태그 하단영역태그
+
+
+ 3 id는 태그의 고유이름
+
+
+ 4 들여쓰기
+
+
+ 4-2
+  li : list 목록(동급의...)
+  ul:li묶음 unordered list
+  ol ordered list 순서있는 목록
+
+ 5 margin: 0 auto; 중앙정렬
+
+  margin : 바깥여백지정 - 요소간의 간격이 조정
+  ? padding : 안쪽여백 - 요소의 크기가 커진다
+
+ 6  스타일초기화
+    브라우저마다 태그에 대한 기본스타일이
+    설정되어 있고 약간의 다름이 있다.
+
+    >> 나만의 스타일을 지정하려함
+    https://cafe.naver.com/leesunhan/607
+
+      *{ /* 전체선택자(모든마크업태그) */
+
+    margin: 0;
+      padding: 0;
+      line-height: 1; /* 줄높이,텍스트줄높이 */
+      font-size: 100%; /* 글자크기 기본 16px로 지정  */
+      font-weight: normal; /* 글두께 */
+    }
+    html{
+      height: 100%;
+    }
+    body{
+      height: 100%;
+    }
+    ul{
+      list-style: none; /* 목록의 점표시 없앰 */
+    }
+    a{
+      text-decoration: none; /* 링크밑줄없애기 */
+      color: #000;
+    }
+
+
+ 6 스타일 주석 /*  */
+
+ 7 css에서 id표시: 선택자#아이디명
+
+ 8 선택자 :
+  스타일을 적용할 마크업태그를 스타일시트에서는
+  선택자라고 부른다
+
+  스타일을 적용할 마크업태그 = 선택자
+
+  - 태그선택자 div,h1
+  - 전체선택자 *
+  - 하위 선택자
+    header h1{ /* header안(하위)의 있는 h1 */
+
+    }
+    예 ) 경기도 안양시
+
+ 9  태그는 2개로 분류된다
+
+  1 블럭태그
+    너비가 기본적으로 꽉찬상태이다
+    한줄을 다쓴다/옆에 다른 태그가 오지 못한다
+    수직으로 쌓인다
+    너비 높이를 지정할 수 있다
+    div,h1,ul,li,hgroup
+
+   ? 인라인
+
+
+  li : list 목록(동급의...)
+
+  ul:li묶음
+
+  젠코딩 emmet 설치
+
+  a : anchor 닻 링크(연결)
+
+  div : division 분할,영역
+      비슷한 위치,역활을 하는 것들을 묶어줌
+
+  <!--   -->  마크업주석
+
+  스타일 구문 형식
+
+  마크업태그{
+   속성:값;
+  }
+
+  /*  */ 스타일 주석
+
+
+  link : html문서와 css파일 연결
+
+  외부스타일시트 : link로 연결된 외부css파일을 연결
+
+  margin: 0 auto; 중앙정렬
+
+  margin : 바깥여백지정 - 요소간의 간격이 조정
+  padding : 안쪽여백 - 요소의 크기가 커진다
+
+  3회차 ------------------------------------
+
+  1 스타일초기화
+    브라우저마다 태그에 대한 기본스타일이
+    설정되어 있고 약간의 다름이 있다.
+
+    >> 나만의 스타일을 지정하려함
+
+    *{ /* 전체선택자(모든마크업태그) */
+
+    margin: 0;
+      padding: 0;
+      line-height: 1; /* 줄높이,텍스트줄높이 */
+      font-size: 100%; /* 글자크기 기본 16px로 지정  */
+      font-weight: normal; /* 글두께 */
+    }
+    html{
+      height: 100%;
+    }
+    body{
+      height: 100%;
+    }
+    ul{
+      list-style: none; /* 목록의 점표시 없앰 */
+    }
+    a{
+      text-decoration: none; /* 링크밑줄없애기 */
+      color: #000;
+    }
+
+2 선택자 : 스타일을 적용할 마크업태그를 스타일시트에서는
+           선택자라고 부른다
+
+           스타일을 적용할 마크업태그 = 선택자
+
+  - 태그선택자 div,h1
+  - 전체선택자 *
+  - 하위 선택자
+    div h1{ /* div안(하위)의 있는 h1 */
+
+    }
+    예 ) 경기도 안양시
+
+
+
+3 레이아웃(배열,배치)
+  수직 -> 수평으로 배치시키는 속성과 값
+  display:inline-block;
+
+  https://www.daleseo.com/css-display-inline-block/
+
+  inline-block속성을 지정하면
+  컨텐츠만큼 태그의 크기가 줄어든다
+
+
+4 태그에 이름 지정
+  class라는 속성(이름)을 지정하기
+
+  <ul class="gnb">
+
+  스타일시트파일에서는
+  아래와 같이 표기
+
+  ul.gnb{ /*선택자에 붙여쓰기 클래스명이 gnb인 ul */
+
+  }
+
+5 중앙정렬(배치)
+  margin: 0 auto;는 한줄에 하나의 대상이 있을때만 적용
+                태그자체를 중앙으로 배치할때
+  text-align:center;는 태그안의 인라인요소를 중앙으로 정렬
+                    상자자체를 중앙으로 배치는 못함
+
+6 배경이미지 지정
+background-image: url(이미지경로/이미지명.확장자) ;
+                    background-size: contain;
+                    background-size: cover;
+                    background-position-y: 43%;
+                    background-repeat: no-repeat;
+
+무료상업용이미지 :https://unsplash.com/
+
+
+7 줄바꿈 <br>
+
+
+8 span태그 : 인라인요소(태그) 묶음
+
+
+
+4 회차 -----------------------------
+
+1 border-radius
+
+2  position:absolute 절대위치 특정지점에서 떨어진 위치설정
+   - 너비가 컨텐츠만큼 줄어든다
+   - margin: 0 auto가 적용되지 않음
+   - 위치는 left,right,top,bottom속성으로 조정한다
+   - 중앙정렬은 
+     left: calc((100% - 1200px) / 2);
+     방식으로 처리
+   - 겹쳐놓을 수 있다.  
+
+   - 부모요소에 posution:relative를 지정해서 기준점으로 설정
+   -  z-index로 높이 조정함
+
+
+  position:relative는 자기자신을 기준으로 위치조정
+  현재 위치영역을 그대로 유지하면서 다른요소에 영향을 주지않고
+  위치를 조정할 수 있다.
+
+
+3 calc() :calculate (계산하다)
+   사칙연산기호 좌우는 띄워야 한다
+
+4 vertical-align: 인라인요소의 수직위치 조절
+
+
+5 :nth-child(n) n번째 자식
+   https://lalacode.tistory.com/6
+
+6 웹아이콘 (구글아이콘)
+  https://fonts.google.com/icons?subset=korean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 간격조절,여백조절
+  안쪽여백 padding
+  바깥여백 margin
+
+
+2 h태그들 묶음 hgroup
+
+3 태그에 이름 지정하기 id
+  한문서안에서 한번만 사용하는 고유이름
+  큰 영역에는 id를 지정
+  - html문서
+  <div id="header">
+
+  - css문서
+  div#header
+
+
+
+
+
+
+
+
+
+5 영역안의 첫번째 요소에 마진을 주면
+  부모요소도 같이 밀림
+  밀리지 않게 처리하려면
+  부모요소에
+  overflow:hidden;을 지정
+
+
+6 태그는 2개로 분류된다
+
+  1 블럭태그
+    너비가 기본적으로 꽉찬상태이다
+    한줄을 다쓴다/옆에 다른 태그가 오지 못한다
+    수직으로 쌓인다
+    너비 높이를 지정할 수 있다
+    div,h1,ul,li,hgroup
+
+  2 인라인태그
+    한줄에 배치가 된다
+    컨텐츠만큼만 커짐
+    너비,높이 지정이 안된다
+    margin값이 제대로 적용되지 않는다
+    a
+
+  3 display:block;
+    인라인태그를 블럭태그로  전환
+
+  4 line-height는 블럭태그에 적용되는
+    속성이다
+    인라인태그에 이것을 쓰려면 블럭으로
+    전환해야 한다.
+
+    line-height주면 글자위아래에 동일한 여백이 생긴다
+
+  5 display:flex 부모에게 주는 자식요소의 정렬명령
+    https://studiomeal.com/archives/197
+
+
+5회차 ----------------------------------
+
+1 rgba(0,0,0,0) 색상값지정 
+red
+green
+blue
+alpha(0~1) 투명도
+
+
+2 벤더 프리픽스 http://tcpschool.com/css/css3_module_vendorPrefix
+  벤더프리픽스란 ? https://nm817.tistory.com/38
+
+
+3 자식선택자 >표시
+   요소바로아래있는 태그에만 스타일 지정됨
+
+4 클래스명은 한 태그에 여러개 줄 수 있다.클래스명 사이는 띄워준다
+  <h3 class="h3 hide">
+
+
+  
+
+
+
+6회차 ----------------------------------
+
+
+1 float 수평정렬
+  float은 띄워서 옆(수평)에 배치
+  float된 요소의 너비는 컨텐츠만큼 줄어든다.
+
+2 box-sizing  컨텐츠의 지정된 너비에 border나 padding의 값을 포함시키는 명령
+  너비에 패딩이나 보더값을 포함시킨다
+  너비를 준후 패딩이나 보더를 지정하더라도
+  너비가 추가로 늘어나지 않는다
+
+
+3 ::before  가상선택자(가상의마크업태그)
+  인라인태그속성을 갖는다.
+
+
+4  overflow: hidden;
+    기본적인 기능
+    부가기능 :: float된 자식요소의 부모높이가 없어지는 것을
+    막아서 부모높이를 생성시킴
+    뒤에 위치된 요소가 끌려오는 것을 막음
+
+
+
+
+7회차 -----------------------------------
+
+1 :not() 
+  https://webisfree.com/2015-11-13/[css]-not-%EC%84%A0%ED%83%9D%EC%9E%90-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95
+
+
+2 웹아이콘
+  https://ionic.io/ionicons/v2
+
+
+3 transform: rotate(-45deg);
+
+
+4 transition: all 0.5s; //transition 변이 : 속성값의 차이를 자연스럽게 애니..
+  https://carina16.tistory.com/50
+
+
+5 #news ul.list > li ul.sns li a i{
+  font-size: 20px;
+  transform: translateY(-6px); /*i태그는 인라인태그이기에 transform명령이 안먹는다->블럭값을 주어야한다*/
+  display: block;
+  }
+
+6 img태그 이미지태그
+
+
+
+7 overflow:hidden // 영역보다 컨텐츠가 더 많아서 영역밖으로 나갈을때의 처리방법 지정
+
+
+
+
+
+
+8회차 --------------------------------------------------
+
+1 iframe태그 : 내부창 (문서내에 다른 문서를 배치하는 내부창)
+
+
+9회차 ---------------------------------
+
+1 <br> 줄바꿈 break
+
+2  웹폰트 : 폰트가 피시가 아닌 웹서버에 배치되어 누가 접속을 하든 특정폰트로 보이게 처리..
+   https://fonts.google.com/
+
+
+
+
+
+  7회차 -----------------------
+  1
+
+
+2  자식선택자 >
+   부모요소 > 자식요소
+   부모요소 바로 아래있는 자식
+
+3 display:inline-block
+  display:flex
+  float:left
+
+4 배경그라디언트 지정
+   http://css3studio.com/page-css3/css-gradient.php
+
+
+8회차 ---------------------------
+
+1 flex-wrap
+
+2 flex-direction
+
+3 align-item
+
+4 form태그와 폼요소
+
+5
+
+9회차 -------------------------------
+
+1 footer태그 - 상단영역
+
+2 header태그 - 상단영역
+
+
+10회차 -------------------------------
+1 무료호스팅 신청하기
+  https://www.dothome.co.kr/
+  회원가입후 무료호스팅신청하기
+
+2 알드라이브 설치.연결하기
+  구글검색 : 알드라이브
+
+3 반응형홈페이지 만들기
+
+  head안에 코드 입력
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+4 미디어쿼리
+@media screen and (max-width:768px){
+ media 장치(스마트폰,태블릿,pc) screen 화면
+ max-width 최대너비
+ max-width:768px ; 768px이하
+}
+https://offbyone.tistory.com/121
+
+5 max-width: 1000px;
+
+6 vw 화면크기를 기준으로 너비,높이를 지정

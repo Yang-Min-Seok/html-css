@@ -1,0 +1,60 @@
+#introduction{
+    background-color: #eee;
+}
+#introduction .wrap{
+    width: 1100px;
+    margin: 0 auto; /* 블럭 태그, 한 줄에 하나의 대상이 있을때만 적용, 태그 자체를 중앙으로 정렬할 때 */
+    padding-top: 80px;
+}
+#introduction .wrap h2{
+    text-align: center; /* 인라인 태그, 인라인 요소를 중앙으로 정렬, 상자자체를 중앙으로 배치는 x*/
+    border: 1px solid;
+    line-height: 3; /* line-height : 3-> 3 * 16px = 48px */
+    width:200px;
+    margin: 0 auto;
+    margin: bottom 40px;
+    font-size:32px;
+    font-weight:bold;
+    border-radius: 10px 20px 30px 40px; /* 왼쪽 위, 오른쪽 위, 오른쪽 아래, 왼쪽 아래 */
+    border-radius: 20px 40px; /* 왼쪽위 오른쪽 아래, 오른쪽 위 왼쪽 아래 */
+    border-top-left-radius:20px;
+    border-top-right-radius:40px;
+    border-bottom-right-radius:60px;
+    border-bottom-left-radius:80px;
+    border-radius:30px;
+    border-top-color:#000;  /* 위쪽 border 색 변경 */
+}
+#introduction .wrap ul{
+    display: flex;
+    flex-wrap: wrap; /* 자동 줄바꿈 (해당 영역이 꽉차면 컨텐츠 아래로 내림) */
+    gap: 15px; /* 자식들 사이 거리 할당 */
+}
+#introduction .wrap ul li{
+    border: 1px solid #ccc;
+    width: calc(25% - (45px / 4));
+    box-sizing: border-box; /* border 값을 너비에 포함시킴 */
+    height:180px;
+}
+#introduction .wrap ul li:nth-child(5){/* html파일의 용량을 최소화 하는 것이 중요! -> 클래스 적용보다 css파일에서 지칭해 주는 것을 이용하기 */
+    width:calc(50% - (15px / 2)); 
+}
+#introduction .wrap ul li:nth-child(6){
+    width:calc(25% - (15px / 2)); 
+}
+#introduction .wrap ul li:nth-child(7){
+    width:calc(25% - (15px / 2));
+}
+#introduction .wrap ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height:50px;
+}
+#introduction .wrap ul li a::before{
+    content:"";
+    width:100%;
+    display: block;
+    height:130px;
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-vision-large.jpg?$ORIGIN_JPG$);
+    background-size:cover;
+}
