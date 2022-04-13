@@ -1,0 +1,18 @@
+/* 공통 스타일 */
+.wrap{
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+.h1{
+    font-size:38px;
+    font-weight:bold;
+}
+.h2{
+    font-size:34px;
+    font-weight:bold;
+}
+.h3{
+    font-size:32px;
+    font-weight:bold;
+}
