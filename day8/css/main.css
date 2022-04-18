@@ -1,0 +1,318 @@
+#introduction{
+    
+}
+#introduction .wrap{
+    
+}
+#introduction .wrap::before{
+    
+}
+#introduction .wrap h2{
+    text-align: center; /* 인라인 태그, 인라인 요소를 중앙으로 정렬, 상자자체를 중앙으로 배치는 x*/
+    line-height: 3; /* line-height : 3-> 3 * 16px = 48px */
+    margin: 0 auto;
+    margin: bottom 40px;
+}
+#introduction .wrap h2::before{ /* 가상의 선택자(인라인 태그) html 파일에는 없음 -> 마크업언어로서 의미없는 태그를 의미 */
+    content:"「 ";
+    transform:translateY(0px) translateX(10px); /* 인라인 태그에는 적용되지 않음! 블럭 태그에만 적용됨 */
+    display: inline-block; /* 한줄로 배치가 되면서(인라인 속성을 유지하면서) 블록 속성 적용시킬 수 있음! */
+    margin-right: 10px;
+    font-size: 46px;
+    color:#c4baba;
+}
+#introduction .wrap h2::after{
+    content:" 」";
+    transform:translateY(9px) translateX(-10px);
+    display:inline-block;
+    margin-left: 10px;
+    font-size:46px;
+    color:#c4baba;
+}
+#introduction .wrap ul{
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈(정렬을 유연하게 해줌) !! */
+    row-gap: 15px; /* 좌, 우가 아닌 위 아래 gap */
+    justify-content: space-between; /* 양 끝점 맞추고 사이 간격 동일하게 조정 */
+}
+#introduction .wrap ul li{
+    box-sizing:border-box;
+    height:180px;
+    width: calc(25% - 45px / 4);
+    transition: all 0.7s;
+}
+#introduction .wrap ul li:hover{
+    box-shadow: 2px 4px 19px #555;
+}
+#introduction .wrap ul li:nth-child(5), #introduction .wrap ul li:nth-child(6), #introduction .wrap ul li:nth-child(7){
+    height:130px;
+}
+#introduction .wrap ul li:nth-child(5){/* html파일의 용량을 최소화 하는 것이 중요! -> 클래스 적용보다 css파일에서 지칭해 주는 것을 이용하기 */
+    width: calc(50% - 15px / 2);
+}
+#introduction .wrap ul li:nth-child(5):hover,#introduction .wrap ul li:nth-child(6):hover,#introduction .wrap ul li:nth-child(7):hover{
+    box-shadow:none;
+}
+#introduction .wrap ul li:nth-child(6){
+    width: calc(25% - 15px / 2);
+    transform: translateX(calc(15px / 2)); /* x방향으로 7.5px만큼 움직이기 */
+}
+#introduction .wrap ul li:nth-child(7){
+    width: 25%;
+}
+#introduction .wrap ul li a{
+    width: 100%;
+    height: 100%;
+    display: block; /* 인라인 태그를 블럭 태그로 변환해줌 -> 높이, 너비 지정 가능해짐 */
+    line-height: 50px; /* 중앙 배치 시 사용하기 */
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden; /* 넘쳐 흐른 부분 잘라냄 */
+    border:2px solid #000;
+}
+#introduction .wrap ul li:nth-child(5) a{
+    background-color: #000;
+    color:#fff;
+}
+#introduction .wrap ul li:nth-child(6) a, #introduction .wrap ul li:nth-child(7) a{
+    flex-direction: column;
+    align-items: center; /* flex 수직정렬 했을때 씀 */
+    padding-left: initial; /* 초기 설정으로 */
+    justify-content: center; /* 수직 중앙 담당 */
+    font-size:13px;
+    line-height: 2;
+    background-color: #000;
+    color:#fff;
+    position:relative;
+}
+#introduction .wrap ul li a::before{
+    content:"";
+    width: calc(100% + 20px);
+    height:130px;
+    display:block;
+    background-size:100%; /* hover과 수치가 맞아야 animation 효과 적용됨 */
+    transform: translateX(-20px) /* 패딩 무시 */ scaleX(1.09);
+    transform-origin: 0% 0%; /* x축 y축 조정 디폴트 값은 정중앙 */
+    transition: all 0.5s;
+    background-position: center;
+}
+#introduction .wrap ul li:hover a::before{/* li에 마우스 올렸을 때 효과는 before에 적용! */
+    background-size:105%;
+}
+#introduction .wrap ul li:nth-child(1) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-vision-large.jpg?$ORIGIN_JPG$);
+}
+#introduction .wrap ul li:nth-child(2) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-company-large.jpg?$ORIGIN_JPG$);
+}
+#introduction .wrap ul li:nth-child(3) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-business-large.jpg?$ORIGIN_JPG$);
+}
+#introduction .wrap ul li:nth-child(4) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-sustainability-large.jpg?$ORIGIN_JPG$);
+}
+#introduction .wrap ul li:nth-child(5) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-careers-large.jpg?$ORIGIN_JPG$);
+    width:calc(50% - 12px);
+}
+#introduction .wrap ul li:nth-child(6) a::before,#introduction .wrap ul li:nth-child(7) a::before{
+    height:35px;
+    width:115px;
+    transform:initial;
+    background-size:contain; /* 잘린 이미지도 자동 수정해서 전부 보이게 해줌 */
+    background-position: center;
+    transition:all 0.5s;
+}
+#introduction .wrap ul li:nth-child(6) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-samsung-design.png?$ORIGIN_PNG$);
+}
+#introduction .wrap ul li:nth-child(7) a::before{
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-menu-business-ehics.png?$ORIGIN_PNG$);
+}
+#introduction .wrap ul li:nth-child(6):hover a::before,#introduction .wrap ul li:nth-child(7):hover a::before{
+    transform:translateY(-10px);
+}
+#introduction .wrap ul li a::after{
+    content: "";
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:2px solid #000;
+    border-bottom: transparent;
+    border-left: transparent;
+    transform: translateY(18px) translateX(-20px) rotate(45deg); /* 시계방향으로 45도 회전 */
+    transition:all 0.7s;
+}
+#introduction .wrap ul li:hover a::after{
+    transform: translateY(18px) translateX(-10px) rotate(45deg);
+}
+#introduction .wrap ul li:nth-child(5) a::after{
+    border-color:#fff;
+}
+#introduction .wrap ul li:nth-child(6) a::after, #introduction .wrap ul li:nth-child(7) a::after{
+    display:none;
+}
+#introduction .wrap ul li:nth-child(5) a::after{
+    transform: translateY(18px) translateX(-100px) rotate(45deg);
+}
+#introduction .wrap ul li:nth-child(7) a::after{
+    display:block;
+    transform:initial;
+    border:none;
+    border-left:1px solid #847f7f;
+    position:absolute; /* 부모 영역에 absolute 지정해야 함 */
+    left:0;
+    transform:initial;
+    width:0;
+    height:40px;
+}
+/* 비전 */
+#vision{
+    padding:100px;
+}
+#vision .wrap{
+    display:flex;
+    justify-content:end;
+    margin-bottom: 100px;
+    position:relative;
+}
+#vision .wrap::before{
+    content:"";
+    height:300px;
+    width:55%;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:1;
+    background-image: url(https://images.samsung.com/is/image/samsung/p5/sec/aboutsamsung/2017/samsung-main-vision-large.jpg?$ORIGIN_JPG$);
+    background-size:cover;
+}
+#vision .wrap article{
+    background-color: #eee;
+    width:60%;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-left:150px;
+    box-sizing:border-box; /* 패딩을 안쪽으로 포함시켜 전체 넓이가 넓어지지 않게 함! */
+    position:relative;
+}
+#vision .wrap article::before{
+    position:absolute;
+    content:"";
+    border:1px solid #333;
+    width:calc(100% - 40px);
+    height:calc(100% - 40px);
+    left:20px; /* 위치 조정 */
+    top:20px;
+}
+#vision .wrap article hgroup{
+
+}
+#vision .wrap article hgroup h2{
+    text-align: center;
+}
+#vision .wrap article hgroup h3{
+    margin:20px 0px;
+}
+#vision .wrap article hgroup p{
+
+}
+#vision .wrap article a.view{
+    border:1px solid #000;
+    margin-top:20px;
+    border-radius:19px; /* 반지름 길이 기준 */
+    display:block;
+    width:150px;
+    height:40px;
+    text-align:center;
+    line-height:38px;
+    position:relative;
+}
+#vision .wrap article a.view:hover{
+    background-color: #000;
+    color:#fff;
+    transition:1.5s;
+}
+/* 기업정보 */
+#information{
+
+}
+#information .wrap{
+    text-align: center;
+    padding-bottom: 40px;
+}
+#information .wrap hgroup{
+    
+}
+#information .wrap hgroup h2{
+
+}
+#information .wrap hgroup h3{
+    line-height: 2;
+    font-weight: 700;
+}
+#information .wrap p{
+    margin-bottom: 20px;
+}
+#information .wrap ul{
+    display:flex;
+    justify-content:space-between;
+    column-gap:20px;
+}
+#information .wrap ul li{
+    display:block;
+    width:calc(100% / 3);
+    background-color: #eee;
+    padding-bottom: 30px;
+    transition: all 0.7s;
+}
+#information .wrap ul li:hover{
+    box-shadow:9px 3px 32px rgba(0,0,0,0.3);/* 오른쪽, 아래쪽, 흐릿한 정도, 색깔 */
+}
+#information .wrap ul li::before{
+    content:"";
+    display:block;
+    width: 320px;
+    height: 320px;
+    margin:30px auto;
+    border-radius: 50%;
+    background-size:cover; /* cover : 지정한 요소를 다 덮도록 배경이비지를 확대 / 축소
+    contain : 지정한 요소 안에 배경 이미지가 다 들어오도록 이미지를 확대 / 축소 */
+    background-position:center; /* 영역 정 가운데 배치 */
+    background-repeat:no-repeat;
+}
+#information .wrap ul li:nth-child(1)::before{
+    background-image: url(https://images.unsplash.com/photo-1526579903323-327e1c2d0b27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60);
+    
+}
+#information .wrap ul li:nth-child(2)::before{
+    background-image: url(https://images.unsplash.com/photo-1650221750572-8c4a1aec406c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60);
+    
+}
+#information .wrap ul li:nth-child(3)::before{
+    background-image: url(https://media.istockphoto.com/photos/kitten-exploring-domestic-setting-picture-id1335433001?b=1&k=20&m=1335433001&s=170667a&w=0&h=9XToSFW4X8uO4QJKBdwFbKJjgxjXiaizLyULFrb4_Gc=);
+    
+}
+#information .wrap ul li h4{
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+#information .wrap ul li a{
+    display:block;
+    margin:0 auto;
+    width:140px;
+    line-height: 3;
+    border-radius:24px;
+    color:#fff;
+    background-color: #000;
+    transition:all 0.7s;
+}
+#information .wrap ul li a:hover{
+    background-color: rgb(244, 11, 11);
+}

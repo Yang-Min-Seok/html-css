@@ -1,0 +1,30 @@
+/* 상단 영역 */
+#header{
+    width:1100px; /* 너비 */
+    /* height:120px; 높이 */
+    margin:30px 60px 90px 120px; /* 위에서부터 시계방향으로 적용*/
+    margin:0 auto; /* 중앙 정렬 (위 아래 -> 0 / 오른쪽 왼쪽 자동) 반드시 너비 지정 후 적용해야함 */
+    display:flex;
+    justify-content: space-between; 
+    /* space-between -> 공간 사이에 두고 양 끝
+    space-around -> 여백 균등히 배분 양 끝 + 컨텐츠 사이
+    space-evenly -> 전체 여백 동일하게 */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+div#header h1::before{
+    content: "";
+}
+div#header h1 a{
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+div#header ul{
+    width:70%;
+    justify-content: space-evenly; /* width 값 주고 지정해야 하는 속성 */
+    display:flex;
+    font-size:14px;
+}
+div#header ul li{
+    
+}
