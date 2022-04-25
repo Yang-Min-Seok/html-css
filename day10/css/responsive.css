@@ -1,0 +1,29 @@
+@media screen and (max-width:768px){ /* 스크린 넓이가 768px 이하일 때 적용 */
+    /* 769 - 1200 -> 태블릿 */
+    /* 미디어 쿼리 */
+    div#header{
+        width:100%;
+        padding-left:15px;
+        box-sizing: border-box;
+        padding-right: 15px;;
+    }
+    div#header ul{
+        display:none;
+    }
+    div#header span.ham{
+        display:block;
+    }
+    div#title{
+        width:100%;
+    }
+}
+@media screen and (max-width:1200px){ /* 스크린 넓이가 1200px 이하일 때 적용*/
+    div#header{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    div#title{
+        width:100%;
+    }
+}
